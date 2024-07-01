@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Calculator.ttf</file>
+        <file>noun_707744-1.ico</file>
+    </qresource>
+</RCC>
