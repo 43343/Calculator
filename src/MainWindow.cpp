@@ -123,13 +123,13 @@ void MainWindow::operations()
     }
     else if (clickButton->text() == "⌫")
     {
-        numbersString = QString::number(currentDigitalNumber, 'g', 15);
+        numbersString = QString::number(currentDigitalNumber, 'g', 13);
         if (!numbersString.isEmpty() && currentDigitalNumber != 0) {
             numbersString.chop(1); 
             currentDigitalNumber = numbersString.toDouble();
         }
     }
-    numbersString = QString::number(currentDigitalNumber, 'g', 15);
+    numbersString = QString::number(currentDigitalNumber, 'g', 13);
     enteredNumberLabel->setText(numbersString);
 }
 void MainWindow::mathOperations()
@@ -148,7 +148,7 @@ void MainWindow::mathOperations()
         currentDigitalNumber = generalNumber + currentDigitalNumber;
 
     QString buttonText = clickButton->text();
-    QString numbersString = QString::number(currentDigitalNumber, 'g', 15);
+    QString numbersString = QString::number(currentDigitalNumber, 'g', 13);
 
     if (buttonText == "=" && !operation.isEmpty())
     {
@@ -163,6 +163,6 @@ void MainWindow::mathOperations()
         generalDigitalNumber->setText(numbersString);
 
         currentDigitalNumber = 0;
-        enteredNumberLabel->setText(QString::number(currentDigitalNumber, 'g', 15));
+        enteredNumberLabel->setText(QString::number(currentDigitalNumber, 'g', 13));
     }
 }
