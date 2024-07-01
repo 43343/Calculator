@@ -116,7 +116,7 @@ void MainWindow::operations()
         currentDigitalNumber = (enteredNumberLabel->text()).toDouble() * -1;
     else if (clickButton->text() == "CE" || clickButton->text() == "C")
         currentDigitalNumber = 0;
-    else if (clickButton->text() == "C")
+    if (clickButton->text() == "C")
     {
         generalDigitalNumber->setText("");
         typeOperation->setText("");
